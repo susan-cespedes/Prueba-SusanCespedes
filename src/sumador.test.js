@@ -5,4 +5,12 @@ describe("VALIDAR CAMPO", () => {
     const dato="titulo de post"
     expect(validarcampo(dato)).toEqual(true);
   });
+
+  it("el post deberia tener un titulo", () => {
+    const dato=""
+    expect(validarcampo(dato)).toEqual(false);
+  });
+
+  
+
 });
