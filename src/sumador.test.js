@@ -1,7 +1,8 @@
-import sumar from "./sumador.js";
+import validarcampo from "./sumador.js";
 
-describe("Sumar", () => {
-  it("deberia sumar dos numeros", () => {
-    expect(sumar(3, 2)).toEqual(5);
+describe("VALIDAR CAMPO", () => {
+  it("el post deberia tener un titulo", () => {
+    const dato="titulo de post"
+    expect(validarcampo(dato)).toEqual(true);
   });
 });

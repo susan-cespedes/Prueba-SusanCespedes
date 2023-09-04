@@ -1,5 +1,8 @@
-function sumar(a, b) {
-  return a + b;
+function validarcampo(dato) {
+  if (dato ===''){
+    return false
+  }
+  return true;
 }
 
-export default sumar;
+export default validarcampo;
