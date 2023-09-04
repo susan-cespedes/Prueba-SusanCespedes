@@ -11,14 +11,16 @@ boton.addEventListener("click", (event) => {
   const titulopost=titulo.value;
   const detallepost=detalle.value;
   const resultado=validarcampo(titulopost);
-  if(resultado===true){
-    div.innerHTML = `<p>TITULO:${titulopost}</p>
-  <p>CONTENIDO:${detallepost}</p>
+  const longitudMensaje=validarlongitud(titulopost);
+
+  if(resultado==false || longitudMensaje==false){
+    div.innerHTML = `<p>No puedes ingresar un mensaje sin un titulo/ El texto tiene que ser menor a 50 caracteres</p>
   `;
   }
   else{
-    div.innerHTML = `<p>No puedes ingresar un mensaje sin un titulo</p>
-  `;
+    div.innerHTML = `<p>TITULO:${titulopost}</p>
+    <p>CONTENIDO:${detallepost}</p>
+    `;
   }
 
   
