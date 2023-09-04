@@ -5,4 +5,12 @@ function validarcampo(dato) {
   return true;
 }
 
-export default validarcampo;
+function validarlongitud(dato) {
+  const longitudtexto=dato.length;
+  if (longitudtexto <=50){
+    return true
+  }
+  return false;
+}
+
+export {validarcampo,validarlongitud};
